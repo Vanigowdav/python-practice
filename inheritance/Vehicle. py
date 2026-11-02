@@ -1,0 +1,28 @@
+class Vehicle:
+    def __init__(self, brand, speed):
+        self.brand = brand
+        self.speed = speed
+
+    def show_details(self):
+        print("Brand:", self.brand)
+        print("Speed:", self.speed)
+
+
+class Car(Vehicle):
+    def show_details(self):
+        super().show_details()
+        print("Type: Car")
+
+
+class Bike(Vehicle):
+    def show_details(self):
+        super().show_details()
+        print("Type: Bike")
+
+
+car1 = Car("Toyota", 120)
+bike1 = Bike("Yamaha", 100)
+
+car1.show_details()
+print()
+bike1.show_details()
